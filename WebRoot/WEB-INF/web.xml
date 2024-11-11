@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5"
+         xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+    <welcome-file-list>
+        <welcome-file>login.jsp</welcome-file>
+    </welcome-file-list>
+
+    <!--  <listener>-->
+    <!--		<listener-class>-->
+    <!--			org.web.context.Listener-->
+    <!--		</listener-class>-->
+    <!--  </listener>-->
+
+    <!--用户servlet  -->
+    <servlet>
+        <servlet-name>userServlet</servlet-name>
+        <servlet-class>chengji.servlet.UserServlet</servlet-class>
+    </servlet>
+
+
+    <servlet-mapping>
+        <servlet-name>userServlet</servlet-name>
+        <url-pattern>/userServlet/*</url-pattern>
+    </servlet-mapping>
+
+
+    <!--班级servlet  -->
+    <servlet>
+        <servlet-name>banjiServlet</servlet-name>
+        <servlet-class>chengji.servlet.BanjiServlet</servlet-class>
+    </servlet>
+
+
+    <servlet-mapping>
+        <servlet-name>banjiServlet</servlet-name>
+        <url-pattern>/banjiServlet/*</url-pattern>
+    </servlet-mapping>
+
+
+    <!--课程servlet  -->
+    <servlet>
+        <servlet-name>kcServlet</servlet-name>
+        <servlet-class>chengji.servlet.KcServlet</servlet-class>
+    </servlet>
+
+
+    <servlet-mapping>
+        <servlet-name>kcServlet</servlet-name>
+        <url-pattern>/kcServlet/*</url-pattern>
+    </servlet-mapping>
+
+
+    <!--成绩servlet  -->
+    <servlet>
+        <servlet-name>chengjiServlet</servlet-name>
+        <servlet-class>chengji.servlet.ChengjiServlet</servlet-class>
+    </servlet>
+
+
+    <servlet-mapping>
+        <servlet-name>chengjiServlet</servlet-name>
+        <url-pattern>/chengjiServlet/*</url-pattern>
+    </servlet-mapping>
+
+</web-app>
